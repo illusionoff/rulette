@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--FRONT CONTROLLER -->
+<html>
+  <head>
+	 <title>Start rulette</title>
+  </head>
+  <body>
+      <h1>Rulette </h1>
+<!--
+<input id="start" type="button" value="Start" onclick="start();" />
+<input id="freeze" type="button" value="Freeze" onclick="freeze();" />
+<input id="stop" type="button" value="Stop" onclick="stop();" />
+	<script>
+	console.log(localStorage["status"]);
+	function start() {
+	localStorage["status"]=1;
+	console.log(localStorage["status"]);
+	}	
+	function freeze() {
+	localStorage["status"]=2;
+	console.log(localStorage["status"]);
+	}
+	function stop() {
+	localStorage["status"]=0;
+	console.log(localStorage["status"]);
+	}
+	//localStorage["status"]=1;
+	//console.log(localStorage["status"]);
+	</script>
+-->
+<input id="start" type="button" value="Start" onclick="control('start');" />
+<input id="freeze" type="button" value="Freeze" onclick="control('freeze');" />
+<input id="stop" type="button" value="Stop" onclick="control('stop');" />
+	<script>
+console.log(localStorage["rulette_status"]);	
+	function control(param) {
+		if (confirm('Вы уверены? что хотите нажать '+param)){// всплывающее окно подтверждения
+			if (param=='start')
+			{
+			localStorage["rulette_status"]='start';
+			// делаем 
+			}
+			if (param=='freeze')
+			{
+			localStorage["rulette_status"]='freeze';
+			}
+			if (param=='stop')
+			{
+			localStorage["rulette_status"]='stop';
+			}
+		}else {
+		return false
+		}
+
+		console.log(localStorage["status"]);
+	}	
+
+	//localStorage["status"]=1;
+	//console.log(localStorage["status"]);
+	</script>
+  </body>
+
+</html>

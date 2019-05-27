@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <script type='text/javascript' src='jquery-2.1.4.js'></script>
+  </head>
+
+  <body>
+    <h1>Hello Plunker!</h1>
+	<script language="javascript" type="text/javascript">
+	//timer_setint=setInterval(function() {setInterval - посто€нно, есть функци€ останова
+	timer_setint=setTimeout(function() { // setTimeout - однократно
+					 $.getJSON('https://donatepay.ru/api/v1/transactions?access_token=TxBToJ7CNy36dXuyvWts8d9HIzTjNGjlP4k2Fun79vJedd1ARJUOHUdScHlz', function(data) { //http://hspick.ru/ посылаем login и Nxoda которые у зрител€ на страничке 
+					if (data=='Progolos')
+						{
+						//localStorage.setItem('Nxoda', data);// упаковываем в json устанавливаем Nxoda= Nxoda на сервере дл€ того чтобы небыло повторного голосовани€
+						//$('#text_1').text('¬аш голос засчитан');
+						}
+					console.log(data);	
+				/*	if ((typeof data=='object')||(data=='error 1')||(data=='error 2')||(data=='error 3'))
+						{
+						$('#text_1').text('ѕроизошла техническа€ ошибка с кодом:'+data+'¬ам не нужно перезагружать страницу');//¬ывод сообщени€ о ошибке
+						//alert(data);	
+						}
+						*/
+				});  
+
+
+	}, 21000);
+</script>
+  </body>
+
+</html>
