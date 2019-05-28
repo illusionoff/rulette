@@ -32,21 +32,21 @@
 <input id="freeze" type="button" value="Freeze" onclick="control('freeze');" />
 <input id="stop" type="button" value="Stop" onclick="control('stop');" />
 	<script>
-console.log(localStorage["rulette_status"]);	
+console.log(localStorage["status"]);	
 	function control(param) {
 		if (confirm('Вы уверены? что хотите нажать '+param)){// всплывающее окно подтверждения
 			if (param=='start')
 			{
-			localStorage["rulette_status"]='start';
+			localStorage["status"]='start';
 			// делаем 
 			}
 			if (param=='freeze')
 			{
-			localStorage["rulette_status"]='freeze';
+			localStorage["status"]='freeze';
 			}
 			if (param=='stop')
 			{
-			localStorage["rulette_status"]='stop';
+			localStorage["status"]='stop';
 			}
 		}else {
 		return false
